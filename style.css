@@ -164,6 +164,10 @@ body{
     letter-spacing: 0.5px;
 }
 
+.btn-mobile {
+    display: none;
+}
+
 .circle {
     width: 2rem;
     height: 2rem;
@@ -564,11 +568,12 @@ footer p {
 }
 
 .footer-right {
-    max-width: 20%;
+    max-width: 30%;
 }
 
 .footer-middle ul, .footer-right ul {
     margin-top: 2.5rem;
+    margin-left: 2.5rem;
 }
 
 .footer-middle li, .footer-right li {
@@ -630,8 +635,20 @@ footer hr {
     }
 
     .btn-download {
-        padding: 16px 20px;
+        padding: 16px 10px;
         margin-left: .5rem;
+    }
+
+    .btn-desktop {
+        display: none;
+    }
+
+    .btn-mobile {
+        display: inline;
+    }
+
+    .banner-content .btn-primary {
+        padding: 16px 25px;
     }
 
     .banner-content h3 {
