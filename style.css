@@ -17,6 +17,7 @@
 
 *{
     margin: 0;
+    padding: 0;
 }
 
 /* Shared */
@@ -129,6 +130,11 @@ body{
     text-decoration: none;
     color: white;
 }
+
+.nav-bar {
+    display: none;
+}
+
 
 .banner {
     margin-top: 2rem;
@@ -270,7 +276,7 @@ body{
     border-radius: 18px;
     background: rgb(34, 34, 34);
     gap: 10rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .run-extra-content {
@@ -293,10 +299,115 @@ body{
     margin-bottom: 1rem;
 }
 
+/* training */
+.training-title{
+    margin-bottom: 2rem;
+    max-width: 70%;
+}
+
+.training-title .title-primary {
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 100%;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+}
+
+
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-1 {
+    grid-column: span 3;
+}
+
+
+.item-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 255, 210, 0.5);
+}
+
+.item-2 {
+    grid-column: span 6;
+}
+
+.item-2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.item-3 {
+    grid-column: span 3;
+}
+
+.item-3::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item-4 {
+    grid-column: span 5;
+}
+
+.item-4::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item-5 {
+    grid-column: span 3;
+}
+
+.item-5::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 255, 0, 0.3);
+}
+
+.item-6 {
+    grid-column: span 4;
+}
+
+.item-6::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 71, 255, 0.3);
+}
+
+
 /* bmi calculator */
 .bmi-calculator {
     color: white;
     margin-bottom: 40rem;
+    margin-top: 2rem;
 }
 
 .bmi-calculator-title {
@@ -379,19 +490,6 @@ input::placeholder {
     padding: 16px 60px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* meet our team */
 .team-image-gallery {
     margin-bottom: 4rem;
@@ -427,15 +525,13 @@ input::placeholder {
     color: white;
     width: 100%;
     object-fit: cover;
+    filter: brightness(70%);
 }
 
 .team-image h5 {
     position: absolute;
     bottom: 2.5rem;
     left: 1rem;
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
     color: white;
     font-size: 1.2rem;
 }
@@ -444,32 +540,10 @@ input::placeholder {
     position: absolute;
     bottom: 1.5rem;
     left: 1rem;
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    color: white;
+    color: rgb(160, 141, 141);
     font-size: 1rem;
 }
 
-
-
-/* .team-image h5 {
-    position: absolute;
-    top: -2rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 1.5em;
-    z-index: 1;
-} */
-
-
-/* bmi calculator */
 
 /* footer */
 .footer {
@@ -529,20 +603,19 @@ footer hr {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*  */    
+/* responsive */    
 @media screen and (max-width: 576px) {
     .nav-menu {
         display: none;
+    }
+
+    .nav-bar {
+        display: block;
+    }
+
+    .nav-bar i {
+        color: white;
+        font-size: 2rem;
     }
 
     .banner {
@@ -600,16 +673,124 @@ footer hr {
         /* border: 2px solid red; */
     }
 
+
+    /* change your habits */
+
+    .change-habits-content {
+        width: 100%;
+    }
+
+    .change-habits-content h3 {
+        font-size: 2rem;
+    }
+
+    /* training-and-exercises */
+    .training-and-exercises {
+        display: none;
+    }
+
+
     /* run extra mile */
     .run-extra {
         flex-direction: column;
+        gap: 0rem;
     }
 
+    .run-extra-content {
+        margin: 0 auto;
+        padding-top: 1.5rem;
+    }
+
+    .run-extra-content h3 {
+        font-size: 2rem;
+    }
+
+    .run-extra-content .btn-primary {
+        padding: 16px 30px;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4rem;
+        border: none;
+        border-radius: 2.7rem;
+        background-color: rgb(230, 83, 60);
+        width: 100%;
+    }
+
+    .run-extra-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    /* bmi calculator */
+
+    .bmi-calculator-title {
+        max-width: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .bmi-calculator-title h3 {
+        font-size: 2rem;
+    }
+
+    .bmi-calculator-content {
+        flex-direction: column;
+    }
+
+    .bmi-calculator-chart {
+        padding-left: 2rem;
+        width: 80%;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .bmi-calculator-chart h5 {
+        font-size: 1.5rem;
+    }
+
+    .calculate-your-bmi {
+        padding-left: 2rem;
+    }
+
+    .calculate-your-bmi h5 {
+        font-size: 1.5rem;
+    }
+
+
+    /* meet our team */
+    .meet-our-team {
+        margin-top: 60rem;
+    }
+
+    .meet-our-team-content {
+        width: 90%;
+    }
+
+    .meet-our-team-content h3 {
+        font-size: 2rem;
+    }
 
     .team-image-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
+    }
+
+    .team-image-container div:nth-child(2) { order: 1; }
+    .team-image-container div:nth-child(3) { order: 3; }
+    .team-image-container div:nth-child(5) { order: 2; }
+    .team-image-container div:nth-child(6) { order: 4; }
+
+    .team-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team-image-gallery .hide-image {
+        display: none;
     }
 
     .image-1, .image-2, .image-3, .image-4, .image-5, .image-6 {
@@ -627,6 +808,18 @@ footer hr {
 
     .footer {
         flex-direction: column;
+    }
+
+    .footer-left {
+        max-width: 100%;
+    }
+
+    .footer-middle {
+        max-width: 100%;
+    }
+    
+    .footer-right {
+        max-width: 100%;
     }
 
 }
